@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canteen Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Canteen Management System</h1>
+    <div class="role-buttons">
+      <button class="btn" onclick="openModal('student')">Student</button>
+      <button class="btn" onclick="openModal('admin')">Admin</button>
+    </div>
+  </div>
+
+  <!-- Student Modal -->
+  <div id="studentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('student')">&times;</span>
+      <h2>Student Portal</h2>
+      <div class="modal-buttons">
+        <button class="btn" onclick="window.location.href='student-login.html'">Login</button>
+        <button class="btn" onclick="window.location.href='student-register.html'">Register</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Modal -->
+  <div id="adminModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('admin')">&times;</span>
+      <h2>Admin Portal</h2>
+      <div class="modal-buttons">
+        <button class="btn" onclick="window.location.href='admin-login.html'">Login</button>
+        <button class="btn" onclick="window.location.href='admin-register.html'">Register</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(role) {
+      document.getElementById(role + 'Modal').style.display = 'block';
+    }
+
+    function closeModal(role) {
+      document.getElementById(role + 'Modal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

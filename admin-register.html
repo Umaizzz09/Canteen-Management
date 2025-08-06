@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Registration - Canteen Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Registration</h1>
+    <form action="admin-register.php" method="POST">
+      <label for="adminCode">Admin Code:</label>
+      <input type="text" id="adminCode" name="adminCode" required />
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit" class="btn">Register</button>
+    </form>
+    <p>Already have an account? <a href="admin-login.html">Login here</a></p>
+
+    <!-- Return to Index Button -->
+    <button onclick="window.location.href='index.html'" class="btn">Return to Home</button>
+  </div>
+</body>
+</html>
